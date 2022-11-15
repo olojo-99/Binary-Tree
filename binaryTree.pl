@@ -17,8 +17,7 @@ inorder(t(T, L, R), X) :- inorder(L, L1), inorder(R, R1), append(L1, [T|R1], X).
 
 % create list X through an postorder traversal of a binary tree
 postorder(nil, []). % empty list for empty tree
-postorder(t(T, L, R), X) :- postorder(L, L1), postorder(R, R1),
-		append(R1, [T], Temp), append(L1, Temp, X).
+postorder(t(T, L, R), X) :- postorder(L, L1), postorder(R, R1), append(R1, [T], Temp), append(L1, Temp, X).
 
 
 % create list X through an preorder traversal of a binary tree
