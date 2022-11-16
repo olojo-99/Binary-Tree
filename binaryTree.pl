@@ -27,7 +27,7 @@ preorder(t(T, L, R), X) :- preorder(L, L1), preorder(R, R1), append([T|L1], R1, 
 
 /* 
 -----------------------
-		TESTING
+        TESTING
 ------------------------
 
 Test Tree
