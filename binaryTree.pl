@@ -30,8 +30,11 @@ preorder(t(T, L, R), X) :- preorder(L, L1), preorder(R, R1), append([T|L1], R1, 
 ------------------------ */
 
 /*
-t(10, t(5, t(3, nil, nil), t(6, nil, nil)), t(20, nil, nil))
+Test Tree
+t(10, t(5, t(3, nil, nil), t(6, nil, nil)), t(20, nil, nil)).
 
+search(6, t(10, t(5, t(3, nil, nil), t(6, nil, nil)), t(20, nil, nil))).
+insert(21, t(10, t(5, t(3, nil, nil), t(6, nil, nil)), t(20, nil, nil)), X).
 inorder(t(10, t(5, t(3, nil, nil), t(6, nil, nil)), t(20, nil, nil)), List).
 preorder(t(10, t(5, t(3, nil, nil), t(6, nil, nil)), t(20, nil, nil)), List).
 postorder(t(10, t(5, t(3, nil, nil), t(6, nil, nil)), t(20, nil, nil)), List).
