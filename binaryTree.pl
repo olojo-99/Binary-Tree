@@ -25,11 +25,11 @@ preorder(nil, []). % empty list for empty tree
 preorder(t(T, L, R), X) :- preorder(L, L1), preorder(R, R1), append([T|L1], R1, X).
 
 
-/* -----------------------
+/* 
+-----------------------
 		TESTING
------------------------- */
+------------------------
 
-/*
 Test Tree
 t(10, t(5, t(3, nil, nil), t(6, nil, nil)), t(20, nil, nil)).
 
