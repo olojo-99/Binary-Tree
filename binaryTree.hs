@@ -49,3 +49,5 @@ preorder (Root x left right) = [x] ++ (preorder left) ++ (preorder right)
 tree1 = Root 5 (Root 1 (Empty) (leaf 3))
         (leaf 7)
 
+tree2 = Root 8 (Root 3 (leaf 1) (Root 6 (leaf 4) (leaf 7))) 
+                (Root 10 (Empty) (Root 14 (leaf 13) (Empty)))
