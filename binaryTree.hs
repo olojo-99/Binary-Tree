@@ -16,12 +16,12 @@ insert x (Root a left right)
 
 
 -- Search a binary tree for a particular value
-search :: BT t -> Int -> Bool
-search Empty _ = False
-search (Root v left right) x
+search :: Int -> BT t -> Bool
+search _ Empty = False
+search x (Root v left right)
     | x == v = True
-    | x < v = search left x
-    | x > v = search right x
+    | x < v = search x left
+    | x > v = search x right
 
 
 -- inorder traversal
